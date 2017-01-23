@@ -1,5 +1,6 @@
 # presenterPi
-Raspberry Pi powerpoint automatiation
+Raspberry Pi powerpoint automatiation.
+Based on Raspbian jessie lite with libreoffice installed.
 
 
 The Raspberry pi will wait for a flashdrive with "presentation.odp" in root directory and when detected autostart libreoffice impress.
