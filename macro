@@ -1,0 +1,80 @@
+
+
+- Start Impress 
+- Select Tools --> Macros --> Organize Macros --> LibreOffice Basic...
+- In the left pane, select My Macros --> Standard --> Module1
+- In the right pane you will get: Main
+- Select Edit
+- You should get something like:
+
+-------------------------------------------
+REM  *****  BASIC  *****
+
+Sub Main
+
+
+End Sub
+-------------------------------------------
+
+
+- Replace this with the following macro (uncomment additional lines you think
+you'll need):
+
+-------------------------------------------
+
+REM  *****  BASIC  *****
+REM Set presentation variables for all presentations
+REM See also the OOo Developer's Guide:
+REM http://wiki.services.openoffice.org/w/images/9/93/DevelopersGuide_OOo3.1.0_09DrawingDocuments.odt
+
+Sub Main
+
+Dim Doc As Object
+Dim Presentation As Object
+
+Doc = ThisComponent
+Presentation = Doc.Presentation
+
+REM Uncomment the line below to make all presentations loop endlessly:
+REM Presentation.IsEndless(True)
+
+REM Uncomment the line below to make all presentations run fullscreen:
+REM Presentation.IsFullScreen(True)
+
+REM Uncomment the line below to remove the 10-second delay:
+Presentation.Pause = 0
+
+REM Uncomment the line below to bypass the navigator on program start:
+REM Presentation.StartWithNavigator(False)
+
+REM Uncomment the line below to make sure presentations always run on top:
+REM Presentation.IsAlwaysOnTop(False)
+
+REM Uncomment the line below to change slides automatically rather than manually
+REM on all presentations:
+REM Presentation.IsAutomatic(True)
+
+REM Uncomment the line below to allow animations in all presentations:
+REM Presentation.AllowAnimations(True)
+
+REM Uncomment the line below to always hide the mouse during presentations:
+REM Presentation.IsMouseVisible(False)
+
+REM Uncomment the line below to start presentations directly on opening:
+REM Presentation.start()
+
+End Sub
+
+----------------------------------------------
+
+- Save the macro, close the dialog
+- Select Tools --> Customize...
+- Select the tab Events
+- At the bottom of the dialog it says Save In: Untitled1 (or another filename)
+- Change Untitled1 into LibreOffice (this will save the event in the global
+  configuration instead of the local document)
+- Select the event Open Document
+- Click on Macro...
+- Select your library in the left pane (e.g. My Macros -> Standard -> Module1)
+- Select "Main" in the right pane, and click OK. This will assign the macro you
+  just created to an "Open Document" event.
