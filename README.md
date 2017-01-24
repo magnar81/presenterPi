@@ -9,21 +9,22 @@ When flashdrive is removed it will shutdown libreoffice impress and go back to w
 
 You can download the complete image file and put it on your Sd-card
 or you can copy the scipts to your existing image.
+###Files
+
+- presenter.sh - Main script, make it autostart on boot, put this in /home/pi/
 
 
-presenter.sh &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Main script, make it autostart on boot, put this in /home/pi/
+- macro - Description for impress macro (remove 10sec delay between presentation loops)
 
 
-macro &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Description for impress macro (remove 10sec delay between presentation loops)
+- images_galaxy.zip - Modified waiticon.png (transparent blank image) Replace original file in /usr/share/libreoffice/share/config/
 
-
-images_galaxy.zip &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Modified waiticon.png (transparent blank image) Replace original file in /usr/share/libreoffice/share/config/
-
-
-You also need to make it autorun on boot with the following commands.
-
+###Autorun
+You also want it to autorun on boot with the following commands.
+```sh
 nano ~/.config/lxsession/LXDE/autostart
-
+```
 add the following line at the bottom
-
+```sh
 @bash /home/pi/presenter.sh
+```
