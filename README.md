@@ -18,3 +18,12 @@ macro &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Description for impress macro (remov
 
 
 images_galaxy.zip &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Modified waiticon.png (transparent blank image) Replace original file in /usr/share/libreoffice/share/config/
+
+
+You also need to make it autorun on boot with the following commands.
+
+nano ~/.config/lxsession/LXDE/autostart
+
+add the following line at the bottom
+
+@bash /home/pi/presenter.sh
