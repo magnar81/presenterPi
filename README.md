@@ -1,10 +1,10 @@
 # presenterPi
 Raspberry Pi powerpoint automatiation.
-Based on Raspbian jessie lite with libreoffice installed.
+Based on Raspbian jessie lite, version Januari 2017, 2017-01-11 kernel 4.4 with aditional libreoffice installed.
 
 
-The Raspberry pi will wait for a flashdrive with "presentation.odp" (if using powerpoint, save as odp) in root directory and when detected autostart libreoffice impress.
-When flashdrive is removed it will shutdown libreoffice impress and go back to wait for presentation file.
+The Raspberry pi will wait for a flashdrive with "presentation.odp" in root directory and when detected autostart libreoffice impress.
+When flashdrive is removed it will shutdown libreoffice impress and go back to wait for presentation file. Be sure to save presentation file as .odp to make it work correctly.
 
 
 You can download the complete image file and put it on your Sd-card
